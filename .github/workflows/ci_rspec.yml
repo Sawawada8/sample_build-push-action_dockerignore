@@ -36,7 +36,7 @@ jobs:
           load: true
           tags: ${{ env.IMAGE_NAME }}
           cache-from: type=local,src=${{ env.PATH_CACHE }}
-          cache-to: type=local,dest=${{ env.PATH_CACHE }},mode=max
+          cache-to: type=local,dest=${{ env.PATH_CACHE }}-new,mode=max
           file: docker/Dockerfile.ci
           context: .
 
